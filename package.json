@@ -1,5 +1,5 @@
 {
-  "name": "@arpitbbhayani/feedcore",
+  "name": "nuxtjsfeedcore",
   "version": "4.1.0",
   "description": "Feed is a RSS, Atom and JSON feed generator for Node.js, making content syndication simple and intuitive!",
   "homepage": "https://github.com/jpmonette/feed",
