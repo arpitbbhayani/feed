@@ -31,6 +31,21 @@ export default (ins: Feed) => {
     base.rss.channel.language = { _text: options.language };
   }
 
+  base.rss.channel["webfeeds:cover"] = {
+    _attributes: {
+      image: options.image,
+    }
+  }
+  base.rss.channel["webfeeds:icon"] = {
+    _text: options.favicon
+  }
+  base.rss.channel["webfeeds:logo"] = {
+    _text: options.logo
+  }
+  base.rss.channel["webfeeds:accentColor"] = {
+    _text: options.color
+  }
+
   /**
    * Channel Image
    * https://validator.w3.org/feed/docs/rss2.html#ltimagegtSubelementOfLtchannelgt
@@ -167,6 +182,7 @@ export default (ins: Feed) => {
   if (isContent) {
     base.rss._attributes["xmlns:content"] = "http://purl.org/rss/1.0/modules/content/";
   }
+  base.rss._attributes["xmlns:webfeeds"] = "http://webfeeds.org/rss/1.0";
 
   if (isAtom) {
     base.rss._attributes["xmlns:atom"] = "http://www.w3.org/2005/Atom";

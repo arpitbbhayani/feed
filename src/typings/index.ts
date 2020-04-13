@@ -50,6 +50,8 @@ export interface FeedOptions {
   link?: string;
   description?: string;
   image?: string;
+  color?: string;
+  logo?: string;
   favicon?: string;
   copyright: string;
 }
