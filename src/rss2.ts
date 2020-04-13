@@ -149,6 +149,19 @@ export default (ins: Feed) => {
       isContent = true;
       item["content:encoded"] = { _cdata: entry.content };
     }
+
+    item["webfeeds:cover"] = {
+      _attributes: {
+        image: entry.image
+      }
+    };
+    item["webfeeds:related"] = {
+      _attributes: {
+        layout: "card",
+        target: "browser",
+      }
+    }
+
     /**
      * Item Author
      * https://validator.w3.org/feed/docs/rss2.html#ltauthorgtSubelementOfLtitemgt
